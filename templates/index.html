@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Still Alive?</title>
+        <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet" />
+        <meta charset="utf-8" />
+        <style>
+            .button {
+                border: none;
+                background-color: #4CAF50; /* Green */
+                border-radius: 50px;
+                padding: 100px 600px;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+                display: inline-block;
+                font-size: 100px;
+}
+        </style>
+    </head>
+        <body> 
+        <h1>Still Alive?</h1>
+            <div class="vertical-center">
+                <form action="/my-link/">
+                    <input class="button" type="submit" value="Still Breathing"/>
+                </form>
+            </div>
+    </body>
+</html>
