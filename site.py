@@ -1,9 +1,18 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, send_file
 from flask.templating import render_template_string
 
 
 app = Flask(__name__)
 
+
+
+@app.route('/download')
+def download_file():
+	#path = "html2pdf.pdf"
+	#path = "info.xlsx"
+	path = "deadoralive.txt"
+	#path = "sample.txt"
+	return send_file(path, as_attachment=True)
 
 @app.route("/")
 def redir():
