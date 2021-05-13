@@ -60,10 +60,23 @@ def verifyalive():
         email_send("aidendombrosky@gmail.com", panicmode, "VERIFY")
         email_send("aidendombrosky05@gmail.com", panicmode, "VERIFY")
         email_send("1967183763@hcs-students.net", panicmode, "VERIFY")
+
+def finalverifyalive():
+    file = open('deadoralive.txt', 'r')
+    status = file.read()
+    print(status) 
+    if status == "dead": 
+        email_send("mindersteve@protonmail.com", panicmode, "VERIFY")
+        death_text("+12058642045", death_reminder)
+        email_send("aidendombrosky@gmail.com", panicmode, "VERIFY")
+        email_send("aidendombrosky05@gmail.com", panicmode, "VERIFY")
+        email_send("1967183763@hcs-students.net", panicmode, "VERIFY")
+        file = open('deadoralive.txt', 'w')
+        file.write('deaddead')
 schedule.every().wednesday.at("12:00").do(verifyalive)
 schedule.every().thursday.at("12:00").do(verifyalive)
 schedule.every().friday.at("12:00").do(verifyalive)
-schedule.every().saturday.at("12:00").do(verifyalive)
+schedule.every().saturday.at("12:00").do(finalverifyalive)
 while True:
    #Checks whether a scheduled task
    #is pending to run or not

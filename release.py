@@ -12,7 +12,7 @@ def releaseall(to_number, content):
         client.messages.create(to=to_number, from_="+12054797696", body=content)
 
 
-schedule.every().sunday.at("23:00").do(releaseall)
+schedule.every().sunday.at("23:59").do(releaseall)
 
 while True:
    #Checks whether a scheduled task
