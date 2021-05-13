@@ -4,15 +4,38 @@ from flask.templating import render_template_string
 
 app = Flask(__name__)
 
-
-
-@app.route('/download')
+@app.route("/M2PMavToIbuJutmknngE/avery")
 def download_file():
-	#path = "html2pdf.pdf"
-	#path = "info.xlsx"
-	path = "deadoralive.txt"
-	#path = "sample.txt"
+	path = "avery.obt"
 	return send_file(path, as_attachment=True)
+
+
+@app.route("/M2PMavToIbuJutmknngE/alex")
+def download_file():
+	path = "akex.obt"
+	return send_file(path, as_attachment=True)
+
+
+@app.route("/M2PMavToIbuJutmknngE/regan")
+def download_file():
+	path = "regan.obt"
+	return send_file(path, as_attachment=True)
+
+
+@app.route("/M2PMavToIbuJutmknngE/makenzie")
+def download_file():
+	path = "makenzie.obt"
+	return send_file(path, as_attachment=True)
+
+
+@app.route("/M2PMavToIbuJutmknngE/lauren")
+def download_file():
+	path = "lauren.obt"
+	return send_file(path, as_attachment=True)
+
+@app.route('/M2PMavToIbuJutmknngE')
+def downloads():
+    return render_template("download.html")
 
 @app.route("/")
 def redir():
@@ -23,6 +46,7 @@ def redir():
 def my_link():
     file = open('deadoralive.txt', 'w')
     file.write('alive')
+    file.close()
     return render_template("alive.html")
 
 
