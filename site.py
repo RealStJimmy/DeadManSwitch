@@ -5,33 +5,39 @@ from flask.templating import render_template_string
 app = Flask(__name__)
 
 @app.route("/M2PMavToIbuJutmknngE/avery")
-def download_file():
+def download_file_avery():
 	path = "avery.obt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/alex")
-def download_file():
-	path = "akex.obt"
+def download_file_alex():
+	path = "alex.obt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/regan")
-def download_file():
+def download_file_regan():
 	path = "regan.obt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/makenzie")
-def download_file():
+def download_file_makeznie():
 	path = "makenzie.obt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/lauren")
-def download_file():
+def download_file_lauren():
 	path = "lauren.obt"
 	return send_file(path, as_attachment=True)
+
+@app.route("/M2PMavToIbuJutmknngE/will")
+def download_file_will():
+	path = "will.obt"
+	return send_file(path, as_attachment=True)
+
 
 @app.route('/M2PMavToIbuJutmknngE')
 def downloads():
