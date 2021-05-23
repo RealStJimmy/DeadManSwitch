@@ -32,9 +32,9 @@ def email_send(SentTo, Content, Subject):
     session.quit()
     print("Email Sent")
 
-death_reminder = "Verify you're alive. NOW! Linkplaceholder"
-emailcontent = "You still alive? Linkplaceholder"
-panicmode = "Verify you're alive. Things are gonna get bad soon. Linkplaceholder"
+death_reminder = "Verify you're alive. NOW! http://99.108.71.191:443"
+emailcontent = "You still alive? http://99.108.71.191:443"
+panicmode = "Verify you're alive. Things are gonna get bad soon. http://99.108.71.191:443"
 
 # Sending a Reminder to verify life
 def livetest():
