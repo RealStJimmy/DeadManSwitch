@@ -15,7 +15,7 @@ http://99.108.71.191:443/M2PMavToIbuJutmknngE
 
 
 
-def releaseall(content):
+def releaseall():
     file = open('deadoralive.txt', 'r')
     status = file.read()
     print(status) 
@@ -25,7 +25,7 @@ def releaseall(content):
         client.messages.create(to="+12055426123", from_="+12054797696", body=content)
         client.messages.create(to="+12057578890", from_="+12054797696", body=content)
         client.messages.create(to="+12057197187", from_="+12054797696", body=content)
-        
+        client.messages.create(to="+12058877999", from_="+12054797696", body=content)
 
 schedule.every().sunday.at("23:30").do(releaseall)
 

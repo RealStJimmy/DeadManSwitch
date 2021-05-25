@@ -6,36 +6,36 @@ app = Flask(__name__)
 
 @app.route("/M2PMavToIbuJutmknngE/avery")
 def download_file_avery():
-	path = "avery.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/avery.odt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/alex")
 def download_file_alex():
-	path = "alex.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/alex.odt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/regan")
 def download_file_regan():
-	path = "regan.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/regan.odt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/makenzie")
 def download_file_makeznie():
-	path = "makenzie.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/makenzie.odt"
 	return send_file(path, as_attachment=True)
 
 
 @app.route("/M2PMavToIbuJutmknngE/lauren")
 def download_file_lauren():
-	path = "lauren.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/lauren.odt"
 	return send_file(path, as_attachment=True)
 
 @app.route("/M2PMavToIbuJutmknngE/will")
 def download_file_will():
-	path = "will.obt"
+	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/will.odt"
 	return send_file(path, as_attachment=True)
 
 
@@ -48,10 +48,11 @@ def redir():
     return render_template("index.html")
 
 
-@app.route("/my-link")
+@app.route("/alive")
 def my_link():
     file = open('deadoralive.txt', 'w')
     file.write('alive')
+    print('alive  and well')
     file.close()
     return render_template("alive.html")
 
@@ -59,4 +60,4 @@ def my_link():
 
 # host='192.168.1.193', port = '80',
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='192.168.1.193', port = '443')
