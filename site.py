@@ -4,42 +4,42 @@ from flask.templating import render_template_string
 
 app = Flask(__name__)
 
-@app.route("/M2PMavToIbuJutmknngE/avery")
+@app.route("/placeholder/placeholder")
 def download_file_avery():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/avery.odt"
+	path = "/placeholder"
 	return send_file(path, as_attachment=True)
 
 
-@app.route("/M2PMavToIbuJutmknngE/alex")
+@app.route("/placeholder")
 def download_file_alex():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/alex.odt"
+	path = "/placeholder"
 	return send_file(path, as_attachment=True)
 
 
-@app.route("/M2PMavToIbuJutmknngE/regan")
+@app.route("/placeholder")
 def download_file_regan():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/regan.odt"
+	path = "/placeholder"
 	return send_file(path, as_attachment=True)
 
 
-@app.route("/M2PMavToIbuJutmknngE/makenzie")
+@app.route("/placeholder/placeholder")
 def download_file_makeznie():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/makenzie.odt"
+	path = "/placeholder"
 	return send_file(path, as_attachment=True)
 
 
-@app.route("/M2PMavToIbuJutmknngE/lauren")
+@app.route("/placeholder/placeholder")
 def download_file_lauren():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/lauren.odt"
+	path = "/placeholder"
 	return send_file(path, as_attachment=True)
 
-@app.route("/M2PMavToIbuJutmknngE/will")
+@app.route("/placeholder/placeholder")
 def download_file_will():
-	path = "/home/stjimmy/DeadManSwitch/ReleaseDocs/will.odt"
+	path = "placeholder"
 	return send_file(path, as_attachment=True)
 
 
-@app.route('/M2PMavToIbuJutmknngE')
+@app.route('/placeholder')
 def downloads():
     return render_template("download.html")
 
