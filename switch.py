@@ -6,14 +6,14 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import os
 
-client = Client('ACaaebe8c489801a9f8f302a0bbc25f1ec', 'f51e489628ba64e7f77af266c023bf8e')
+client = Client('Client Data', 'Client Data ')
 
 def death_text(to_number, content):
     client.messages.create(to=to_number, from_="+12054797696", body=content)
 
 def email_send(SentTo, Content, Subject):
     sender_address = "deadmansswitcher@gmail.com"
-    sender_pass = "76pM?JaaaEU7``(j"
+    sender_pass = "Pass"
     receiver_address = SentTo
     mail_content = Content
     # Setup the MIME
@@ -32,13 +32,13 @@ def email_send(SentTo, Content, Subject):
     session.quit()
     print("Email Sent")
 
-death_reminder = "Verify you're alive. NOW! http://99.108.71.191:443"
-emailcontent = "You still alive? http://99.108.71.191:443"
-panicmode = "Verify you're alive. Things are gonna get bad soon. http://99.108.71.191:443"
+death_reminder = "Verify message"
+emailcontent = "Verify message"
+panicmode = "Verify message "
 
 # Sending a Reminder to verify life
 def livetest():
-    email_send("mindersteve@protonmail.com", emailcontent, "LivingTest")
+    email_send("emailplaceholder@protonmail.com", emailcontent, "LivingTest")
     print("work")
 
 schedule.every().monday.at("09:00").do(livetest)
@@ -55,22 +55,22 @@ def verifyalive():
     status = file.read()
     print(status) 
     if status == "dead": 
-        email_send("mindersteve@protonmail.com", panicmode, "VERIFY")
-        death_text("+12058642045", death_reminder)
-        email_send("aidendombrosky@gmail.com", panicmode, "VERIFY")
-        email_send("aidendombrosky05@gmail.com", panicmode, "VERIFY")
-        email_send("1967183763@hcs-students.net", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
+        death_text("+placeholder", death_reminder)
+        email_send("placeholder", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
 
 def finalverifyalive():
     file = open('deadoralive.txt', 'r')
     status = file.read()
     print(status) 
     if status == "dead": 
-        email_send("mindersteve@protonmail.com", panicmode, "VERIFY")
-        death_text("+12058642045", death_reminder)
-        email_send("aidendombrosky@gmail.com", panicmode, "VERIFY")
-        email_send("aidendombrosky05@gmail.com", panicmode, "VERIFY")
-        email_send("1967183763@hcs-students.net", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
+        death_text("+placeholder", death_reminder)
+        email_send("placeholder", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
+        email_send("placeholder", panicmode, "VERIFY")
         file = open('deadoralive.txt', 'w')
         file.write('deaddead')
 schedule.every().wednesday.at("12:00").do(verifyalive)
