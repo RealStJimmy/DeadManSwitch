@@ -5,7 +5,7 @@ from twilio.rest import Client
 client = Client('Client Data', 'Client Data')
 
 content = '''
-PLACEHOLDER FOR RELASE INFOR 
+PLACEHOLDER FOR RELASE INFO
 Website placeholder 
 '''
 
